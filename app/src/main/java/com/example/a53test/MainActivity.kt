@@ -78,7 +78,7 @@ fun Change() {
     val scope = rememberCoroutineScope()
 
     ModalNavigationDrawer(
-        drawerState = drawer, gesturesEnabled = false,
+        drawerState = drawer,
         drawerContent = {
             ModalDrawerSheet {
                 Inside(drawer, scope)
@@ -114,7 +114,6 @@ fun Change() {
                 modifier = Modifier
                     .padding(innerPadding)
                     .fillMaxWidth()
-                    .background(Color.Cyan)
             ) {
                 val pagerState = rememberPagerState(pageCount = {2})
                 HorizontalPager(
